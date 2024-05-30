@@ -1,0 +1,7 @@
+DROP TYPE IF EXISTS "MerchantCategory" CASCADE;
+DROP TYPE IF EXISTS "ProductCategory" CASCADE;
+ALTER TABLE "item" DROP CONSTRAINT IF EXISTS "item_merchantId_fkey";
+DROP INDEX IF EXISTS idx_merchant;
+DROP INDEX IF EXISTS idx_item;
+DROP TABLE IF EXISTS "item";
+DROP TABLE IF EXISTS "merchant";

@@ -1,0 +1,11 @@
+{
+    "watch": [
+        "."
+    ],
+    "ignore": [
+        "db/migrations",
+        "node_modules"
+    ],
+    "ext": ".go",
+    "exec": "go run main.go"
+}
