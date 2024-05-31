@@ -20,6 +20,7 @@ func Init(ctx context.Context) {
 		os.Getenv("DB_NAME"),
 		os.Getenv("DB_PARAMS"),
 	)
+	fmt.Println(connStr)
 	ctx, cancel := context.WithTimeout(ctx, 10*time.Second)
 	defer cancel()
 	db, err = sqlx.ConnectContext(ctx, "pgx", connStr)
